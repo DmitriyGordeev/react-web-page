@@ -18,4 +18,33 @@ class App extends Component {
   }
 }
 
-export default App;
+class Board extends React.Component {
+
+    constructor(property) {
+        super(property);
+        this.state = { value: null };
+    }
+
+    static renderUI(label, placeholder) {
+        return(
+            <label>{label}
+                <input placeholder={placeholder}/>
+            </label>
+        );
+    }
+
+    render() {
+        return (
+            <div className="block">
+                <p className="header" onClick={() => this.setState({value: 'X'})}>{this.state.value}</p>
+                <p className="description">Hello I am Description!</p>
+                {Board.renderUI("Привет, напиши здесь имя", "ИМЯ")}
+                {Board.renderUI("Напиши тут email", "МЫЛО!")}
+            </div>
+        );
+    }
+
+}
+
+
+export default Board;
