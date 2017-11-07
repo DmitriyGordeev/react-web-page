@@ -24,12 +24,22 @@ CardText.defaultProps = {
 class Card extends React.Component {
     constructor() {
         super();
+
+        this.state = {
+            acitivityType: "Activity Type [Card.state]",
+            eventName: "Event Name [Card.state]",
+            eventLocation: "Event Location [Card.state]"
+        }
     }
 
     render() {
         return (
             <div className={"card-box"}>
-                <CardText />
+                <CardText
+                    activity={this.state.acitivityType}
+                    eventName={this.state.eventName}
+                    eventLocation={this.state.eventLocation} />
+
                 <img src={ this.props.imageSrc }/>
             </div>
         );
