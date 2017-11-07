@@ -3,13 +3,31 @@
     height: 400px;
     background: white;
     font-family: 'Roboto Condensed', sans-serif;
+    position: relative;
 }
 
 .card-box .activity-type {
     color: #30bfb3;
+    padding: 15px;
+
     background: blue;
 }
 
 .card-box .event-name {
     background: red;
+    font-size: 24px;
+    padding: 0 15px;
+}
+
+.card-box .event-location {
+    color: #999999;
+    background: yellow;
+    padding: 0 15px;
+}
+
+.card-box img {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }

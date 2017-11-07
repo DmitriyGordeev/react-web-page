@@ -10,7 +10,9 @@ class Card extends React.Component {
         return (
             <div className={"card-box"}>
                 <p className={"activity-type"}>{ this.props.activity }</p>
-                <h2 className={"event-name"}>{ this.props.eventName }</h2>
+                <p className={"event-name"}>{ this.props.eventName }</p>
+                <p className={"event-location"}>{ this.props.eventLocation }</p>
+                <img src={ this.props.imageSrc }/>
             </div>
         );
     }
@@ -18,7 +20,8 @@ class Card extends React.Component {
 
 Card.defaultProps = {
     activity: "Activity Type",
-    eventName: "Some Event Name"
+    eventName: "Event Name",
+    eventLocation: "Event Location"
 };
 
 export default Card;

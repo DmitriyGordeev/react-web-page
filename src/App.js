@@ -11,7 +11,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <Card eventName={"Teens Day"}/>
+            <Card eventName={"Teens Day"} imageSrc={"Tesla-Model-S-full-HD.jpg"}/>
         );
     }
 
