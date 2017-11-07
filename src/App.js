@@ -1,19 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class Square extends React.Component {
-
-    constructor() {
-        super();
-    }
-
-    render() {
-        return (
-            <div className={ "square " + this.props.class }>{this.props.value}</div>
-        );
-    }
-}
-
 class App extends React.Component {
 
     constructor() {
@@ -39,12 +26,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="block">
-                <button onClick = { this.forceUpdateHandler }>SET STATE</button>
-                <Square class={ "box" } value={
-                    Math.random()
-                }/>
-            </div>
+            <div></div>
         );
     }
 
