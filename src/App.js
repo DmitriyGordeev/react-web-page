@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Card from "./Card";
+import Grid from "./Grid";
 
 
 class App extends React.Component {
@@ -11,10 +12,12 @@ class App extends React.Component {
 
     render() {
         return (
-            <Card activity={"Семинары, воркшопы и тренинги"}
+            /*<Card activity={"Семинары, воркшопы и тренинги"}
                   eventName={"Teens Day"}
                   eventLocation={"Музей современного искусства \"Гараж\""}
-                  imageSrc={"Tesla-Model-S-full-HD.jpg"} />
+                  imageSrc={"Tesla-Model-S-full-HD.jpg"} />*/
+
+            <Grid />
         );
     }
 

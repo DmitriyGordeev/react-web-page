@@ -1,9 +1,11 @@
 .card-box {
-    width: 260px;
-    height: 400px;
+    width: 360px;
+    height: 500px;
     background: white;
     font-family: 'Roboto Condensed', sans-serif;
     position: relative;
+    /*float: left;*/
+    display: inline-block;
 }
 
 .card-box > .card-text {

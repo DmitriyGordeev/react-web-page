@@ -20,7 +20,6 @@ CardText.defaultProps = {
     eventLocation: "Event Location"
 };
 
-
 class Card extends React.Component {
     constructor() {
         super();
@@ -39,7 +38,5 @@ class Card extends React.Component {
         );
     }
 }
-
-
 
 export default Card;
