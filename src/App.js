@@ -1,22 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+import Rectangle from "./Rectangle";
 
 class Square extends React.Component {
 
@@ -31,16 +15,22 @@ class Square extends React.Component {
     }
 }
 
-class Board extends React.Component {
+class App extends React.Component {
 
     constructor() {
         super();
+
+        this.state = {
+            value: 1239002,
+            yell:  "YELL!"
+        }
     }
 
     render() {
         return (
             <div className="block">
-                <Square class={"box"} value={190}/>
+                <Square class={ "box" } value={ this.state.value }/>
+                <Rectangle yell={ this.state.yell }/>
             </div>
         );
     }
@@ -48,4 +38,4 @@ class Board extends React.Component {
 }
 
 
-export default Board;
+export default App;
