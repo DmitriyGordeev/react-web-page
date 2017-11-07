@@ -6,26 +6,33 @@
     position: relative;
 }
 
-.card-box .activity-type {
+.card-box > .card-text {
+    /*background: green;*/
+    height: 50%;
+    padding: 7px 14px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.card-text > .activity-type {
     color: #30bfb3;
-    padding: 15px;
-
-    background: blue;
+    /*background: blue;*/
 }
 
-.card-box .event-name {
-    background: red;
+.card-text > .event-name {
+    /*background: red;*/
     font-size: 24px;
-    padding: 0 15px;
+    margin-top: -5px;
 }
 
-.card-box .event-location {
+.card-text > .event-location {
     color: #999999;
-    background: yellow;
-    padding: 0 15px;
+    /*background: yellow;*/
+    position: absolute;
+    bottom: 10px;
 }
 
-.card-box img {
+.card-box > img {
     height: 50%;
     width: 100%;
     position: absolute;

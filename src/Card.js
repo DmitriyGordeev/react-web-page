@@ -1,6 +1,26 @@
 import React, { Component } from 'react';
 import './Card.css'
 
+class CardText extends React.Component {
+
+    render() {
+        return (
+            <div className={"card-text"}>
+                <p className={"activity-type"}>{ this.props.activity }</p>
+                <p className={"event-name"}>{ this.props.eventName }</p>
+                <p className={"event-location"}>{ this.props.eventLocation }</p>
+            </div>
+        );
+    }
+}
+
+CardText.defaultProps = {
+    activity: "Activity Type",
+    eventName: "Event Name",
+    eventLocation: "Event Location"
+};
+
+
 class Card extends React.Component {
     constructor() {
         super();
@@ -9,19 +29,13 @@ class Card extends React.Component {
     render() {
         return (
             <div className={"card-box"}>
-                <p className={"activity-type"}>{ this.props.activity }</p>
-                <p className={"event-name"}>{ this.props.eventName }</p>
-                <p className={"event-location"}>{ this.props.eventLocation }</p>
+                <CardText />
                 <img src={ this.props.imageSrc }/>
             </div>
         );
     }
 }
 
-Card.defaultProps = {
-    activity: "Activity Type",
-    eventName: "Event Name",
-    eventLocation: "Event Location"
-};
+
 
 export default Card;
