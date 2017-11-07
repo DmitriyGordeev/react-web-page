@@ -1,0 +1,15 @@
+.card-box {
+    width: 260px;
+    height: 400px;
+    background: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.card-box .activity-type {
+    color: #30bfb3;
+    background: blue;
+}
+
+.card-box .event-name {
+    background: red;
+}

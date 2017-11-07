@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Card from "./Card";
+
 
 class App extends React.Component {
 
@@ -9,7 +11,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div></div>
+            <Card eventName={"Teens Day"}/>
         );
     }
 
