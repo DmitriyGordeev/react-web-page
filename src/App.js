@@ -18,13 +18,6 @@ class App extends Component {
   }
 }
 
-
-function S(props) {
-    return (
-        <div className="square ">{ props.value }</div>
-    );
-}
-
 class Square extends React.Component {
 
     constructor() {
@@ -47,7 +40,6 @@ class Board extends React.Component {
     render() {
         return (
             <div className="block">
-                <S value={123}/>
                 <Square class={"box"} value={190}/>
             </div>
         );
