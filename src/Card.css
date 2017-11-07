@@ -1,16 +1,21 @@
-.card-box {
-    width: 360px;
+.card-box-container {
+    width: 33.3%;
     height: 500px;
+    padding: 0 30px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.card-box {
     background: white;
+    height: 100%;
     font-family: 'Roboto Condensed', sans-serif;
     position: relative;
-    /*float: left;*/
-    display: inline-block;
 }
 
 .card-box > .card-text {
     /*background: green;*/
-    height: 50%;
+    height: 43%;
     padding: 7px 16px;
     box-sizing: border-box;
     position: relative;
@@ -39,7 +44,7 @@
 }
 
 .card-box > img {
-    height: 50%;
+    height: 57%;
     width: 100%;
     position: absolute;
     bottom: 0;

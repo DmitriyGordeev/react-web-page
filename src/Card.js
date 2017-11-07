@@ -27,13 +27,15 @@ class Card extends React.Component {
 
     render() {
         return (
-            <div className={"card-box"}>
-                <CardText
-                    activity={this.props.activity}
-                    eventName={this.props.eventName}
-                    eventLocation={this.props.eventLocation} />
+            <div className={"card-box-container"}>
+                <div className={"card-box"}>
+                    <CardText
+                        activity={this.props.activity}
+                        eventName={this.props.eventName}
+                        eventLocation={this.props.eventLocation} />
 
-                <img src={ this.props.imageSrc }/>
+                    <img src={ this.props.imageSrc }/>
+                </div>
             </div>
         );
     }
