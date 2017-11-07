@@ -20,7 +20,12 @@ class Grid extends React.Component {
 
     render() {
         return (
-            <GridRow/>
+            <div>
+                <GridRow/>
+                <GridRow/>
+                <GridRow/>
+                <GridRow/>
+            </div>
         );
     }
 

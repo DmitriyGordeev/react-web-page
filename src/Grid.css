@@ -1,10 +1,6 @@
 
 section.grid-row {
     width: 90%;
-    margin: 0 auto;
-    /*background: yellow;*/
-}
+    margin: 0 auto 50px;
 
-/*section.grid-row > .card-box:last-of-type {*/
-    /*float: right;*/
-/*}*/
+}
