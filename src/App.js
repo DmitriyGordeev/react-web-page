@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Rectangle from "./Rectangle";
 
 class Square extends React.Component {
 
@@ -23,14 +22,28 @@ class App extends React.Component {
         this.state = {
             value: 1239002,
             yell:  "YELL!"
-        }
+        };
+
+        this.setStateHandler = this.setStateHandler.bind(this);
+        this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
+    }
+
+    setStateHandler() {
+        var v = this.state.value;
+        this.setState({ value: v + 1 });
+    }
+
+    forceUpdateHandler() {
+        this.forceUpdate();
     }
 
     render() {
         return (
             <div className="block">
-                <Square class={ "box" } value={ this.state.value }/>
-                <Rectangle yell={ this.state.yell }/>
+                <button onClick = { this.forceUpdateHandler }>SET STATE</button>
+                <Square class={ "box" } value={
+                    Math.random()
+                }/>
             </div>
         );
     }
