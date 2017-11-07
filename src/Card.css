@@ -9,13 +9,14 @@
 .card-box > .card-text {
     /*background: green;*/
     height: 50%;
-    padding: 7px 14px;
+    padding: 7px 16px;
     box-sizing: border-box;
     position: relative;
 }
 
 .card-text > .activity-type {
     color: #30bfb3;
+    width: 80%;
     /*background: blue;*/
 }
 
@@ -23,6 +24,7 @@
     /*background: red;*/
     font-size: 22px;
     margin-top: -5px;
+    font-weight: 800;
 }
 
 .card-text > .event-location {
@@ -30,6 +32,8 @@
     /*background: yellow;*/
     position: absolute;
     bottom: 10px;
+    font-size: 14px;
+    width: 80%;
 }
 
 .card-box > img {

@@ -11,7 +11,10 @@ class App extends React.Component {
 
     render() {
         return (
-            <Card eventName={"Teens Day"} imageSrc={"Tesla-Model-S-full-HD.jpg"}/>
+            <Card activity={"Семинары, воркшопы и тренинги"}
+                  eventName={"Teens Day"}
+                  eventLocation={"Музей современного искусства \"Гараж\""}
+                  imageSrc={"Tesla-Model-S-full-HD.jpg"} />
         );
     }
 
