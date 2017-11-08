@@ -23,7 +23,16 @@ class App extends React.Component {
                     <ActionBar />
                 </header>
                 <div className={"filter-stroke"}>
+                    <div className={"action-bar"}>
 
+                        <div className={"filter-item"}>
+                            <p>Filter item</p>
+                            <i className={"material-icons"}>{"clear"}</i>
+
+                        </div>
+
+
+                    </div>
                 </div>
                 <Grid />
             </div>

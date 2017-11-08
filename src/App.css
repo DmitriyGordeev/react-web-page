@@ -10,3 +10,12 @@ header {
     height: 56px;
     margin: 0;
 }
+
+.filter-stroke > .action-bar {
+    height: 100%;
+}
+
+.filter-item {
+    background: white;
+    display: inline-block;
+}
