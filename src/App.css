@@ -1,0 +1,19 @@
+header {
+    background: white;
+    height: 56px;
+    border-bottom: 1px solid #dddddd;
+}
+
+header > .action-bar {
+    width: 85%;
+    margin: 0 auto;
+    line-height: 56px;
+}
+
+.dropdown-menu {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.dropdown-menu > p {
+    color: #999999;
+}

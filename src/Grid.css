@@ -1,7 +1,7 @@
 section.grid {
-    width: 90%;
+    width: 85%;
     display: grid;
-    margin: 0 auto;
+    margin: 80px auto 0;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 0;
+    grid-gap: 50px;
 }

@@ -2,18 +2,6 @@ import React, { Component } from 'react';
 import './Grid.css'
 import Card from "./Card";
 
-class GridRow extends React.Component {
-    render() {
-        return(
-            <section className="grid-row">
-                <Card imageSrc={"Tesla-Model-S-full-HD.jpg"}/>
-                <Card imageSrc={"Tesla-Model-S-full-HD.jpg"}/>
-                <Card imageSrc={"Tesla-Model-S-full-HD.jpg"}/>
-            </section>
-        );
-    }
-}
-
 class Grid extends React.Component {
 
     test_jsonData() {
@@ -55,18 +43,16 @@ class Grid extends React.Component {
                 end_date: '2017-12-10'
             }
         ];
-
         return data;
     }
 
     jsonCards(data) {
-        var result = data.map(function(e) {
+        return data.map(function(e) {
             return <Card
                 eventName={e.title}
                 eventLocation={e.location}
                 imageSrc={e.image_url} />;
         });
-        return result;
     }
 
     render() {
