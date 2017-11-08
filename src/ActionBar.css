@@ -1,0 +1,46 @@
+header > .action-bar {
+    width: 85%;
+    margin: 0 auto;
+    line-height: 56px;
+}
+
+.dropdown-menu {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.dropdown-menu > p {
+    color: #999999;
+    cursor: pointer;
+}
+
+.dropdown-menu > ul {
+    background: #000000;
+    color: white;
+    position: absolute;
+    z-index: 10;
+    top: 56px;
+    width: 300px;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: content-box;
+}
+
+.dropdown-menu > ul > li:not(:last-of-type) {
+    border-bottom: 1px solid #dddddd;
+}
+
+.dropdown-menu > ul > li {
+    font-weight: 100;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.dropdown-menu > ul > li:hover {
+    color: #30bfb3;
+    transition-duration: 0.2s;
+}
+
+#top-menu-dropdown {
+    display: none;
+}
