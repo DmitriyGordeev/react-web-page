@@ -9,14 +9,15 @@ import App from './App';
 
 jQuery(document).ready(function() {
 
+    ReactDOM.render(<App />, document.getElementById('root'));
+
+    // click on the blank space makes the top-menu to disappear:
     jQuery("#root").click(function() {
         var menu = jQuery("#top-menu-dropdown");
         if(menu.css("display") != "none") {
             menu.toggle();
         }
     });
-
-    ReactDOM.render(<App />, document.getElementById('root'));
 });
 
 // registerServiceWorker();
