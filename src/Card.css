@@ -1,9 +1,12 @@
 .card-box-container {
     width: 33.3%;
+    min-width: 320px;
     height: 500px;
     padding: 0 30px;
     display: inline-block;
     box-sizing: border-box;
+    vertical-align: middle;
+    margin-bottom: 30px;
 }
 
 .card-box {
