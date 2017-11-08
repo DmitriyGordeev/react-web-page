@@ -47,11 +47,11 @@ class Grid extends React.Component {
     }
 
     jsonCards(data) {
-        return data.map(function(e) {
+        return data.map(function(object) {
             return <Card
-                eventName={e.title}
-                eventLocation={e.location}
-                imageSrc={e.image_url} />;
+                eventName={object.title}
+                eventLocation={object.location}
+                imageSrc={object.image_url} />;
         });
     }
 

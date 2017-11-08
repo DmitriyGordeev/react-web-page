@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import Card from "./Card";
 import Grid from "./Grid";
+import ActionBar from "./ActionBar";
 
 class App extends React.Component {
 
@@ -20,17 +20,7 @@ class App extends React.Component {
         return (
             <div>
                 <header>
-                    <div className={"action-bar"}>
-                        <div className={"dropdown-menu"} onClick={this.onClickHandler}>
-                            <p>Тип события</p>
-                            <ul id={"top-dropdown"}>
-                                <li>Item1</li>
-                                <li>Item2</li>
-                                <li>Item3</li>
-                                <li>Item4</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <ActionBar />
                 </header>
                 <Grid />
             </div>
@@ -38,6 +28,5 @@ class App extends React.Component {
     }
 
 }
-
 
 export default App;
