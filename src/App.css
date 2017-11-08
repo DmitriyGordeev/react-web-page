@@ -35,3 +35,7 @@ header > .action-bar {
     border-bottom: 1px solid #dddddd;
     font-weight: 200;
 }
+
+#top-menu-dropdown {
+    display: none;
+}
