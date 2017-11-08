@@ -11,6 +11,8 @@ header > .action-bar {
 .dropdown-menu > p {
     color: #999999;
     cursor: pointer;
+    line-height: 56px;
+    margin: 0;
 }
 
 .dropdown-menu > ul {
@@ -18,11 +20,12 @@ header > .action-bar {
     color: white;
     position: absolute;
     z-index: 10;
-    top: 40px;
+    top: 56px;
     width: 300px;
     list-style-type: none;
     padding: 5px 15px;
     box-sizing: content-box;
+    margin: 0;
 }
 
 .dropdown-menu > ul > li:not(:last-of-type) {
@@ -33,7 +36,7 @@ header > .action-bar {
     font-weight: 100;
     transition-duration: 0.2s;
     cursor: pointer;
-    padding: 10px;
+    padding: 12px;
 }
 
 .dropdown-menu > ul > li:hover {
