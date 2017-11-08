@@ -3,7 +3,6 @@ import './Grid.css'
 import Card from "./Card";
 
 class GridRow extends React.Component {
-
     render() {
         return(
             <section className="grid-row">
@@ -13,7 +12,6 @@ class GridRow extends React.Component {
             </section>
         );
     }
-
 }
 
 class Grid extends React.Component {
