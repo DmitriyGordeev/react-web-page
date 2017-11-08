@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Card from "./Card";
 import Grid from "./Grid";
 
 class App extends React.Component {
