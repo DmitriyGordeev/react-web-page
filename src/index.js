@@ -8,6 +8,14 @@ import App from './App';
 
 
 jQuery(document).ready(function() {
+
+    jQuery("#root").click(function() {
+        var menu = jQuery("#top-menu-dropdown");
+        if(menu.css("display") != "none") {
+            menu.toggle();
+        }
+    });
+
     ReactDOM.render(<App />, document.getElementById('root'));
 });
 
