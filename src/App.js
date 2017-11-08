@@ -21,6 +21,9 @@ class App extends React.Component {
             <div>
                 <header>
                     <ActionBar />
+                    <div className={"filter-stroke"}>
+
+                    </div>
                 </header>
                 <Grid />
             </div>

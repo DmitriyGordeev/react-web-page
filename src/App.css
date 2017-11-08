@@ -3,3 +3,9 @@ header {
     height: 56px;
     border-bottom: 1px solid #dddddd;
 }
+
+.filter-stroke {
+    background: #dddddd;
+    height: 40px;
+    margin: 0;
+}
