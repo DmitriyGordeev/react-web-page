@@ -33,7 +33,16 @@ header > .action-bar {
 
 .dropdown-menu > ul > li:not(:last-of-type) {
     border-bottom: 1px solid #dddddd;
-    font-weight: 200;
+}
+
+.dropdown-menu > ul > li {
+    font-weight: 100;
+    transition-duration: 0.2s;
+}
+
+.dropdown-menu > ul > li:hover {
+    color: #30bfb3;
+    transition-duration: 0.2s;
 }
 
 #top-menu-dropdown {
