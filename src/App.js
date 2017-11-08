@@ -7,6 +7,8 @@ import Grid from "./Grid";
 class App extends React.Component {
 
     onClickHandler() {
+
+        // TODO: remove jquery?
         jQuery("#top-menu-dropdown").toggle();
     }
 
