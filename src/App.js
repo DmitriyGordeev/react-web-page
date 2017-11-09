@@ -26,8 +26,10 @@ class App extends React.Component {
                     <div className={"action-bar"}>
 
                         <div className={"filter-item"}>
-                            <p>Filter item</p>
-                            <i className={"material-icons"}>{"clear"}</i>
+                            <span>Filter item</span>
+                            <div className={"filter-close-button"}>
+                                <i className={"material-icons"}>{"clear"}</i>
+                            </div>
 
                         </div>
 
