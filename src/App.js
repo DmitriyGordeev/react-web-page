@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import './App.css';
 import Grid from "./Grid";
@@ -25,12 +26,23 @@ class App extends React.Component {
                 <div className={"filter-stroke"}>
                     <div className={"action-bar"}>
 
-                        <div className={"filter-item"}>
-                            <span>Семинары и воркшопы</span>
-                            <div className={"filter-close-button"}>
-                                <i className={"material-icons"}>{"clear"}</i>
-                            </div>
-                        </div>
+                        {this.props.testStore.map((filterItem, index) =>
+                            <li key={index}>{filterItem}</li>
+                        )}
+
+                        {/*<div className={"filter-item"}>*/}
+                            {/*<span>Семинары и воркшопы</span>*/}
+                            {/*<div className={"filter-close-button"}>*/}
+                                {/*<i className={"material-icons"}>{"clear"}</i>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+
+                        {/*<div className={"filter-item"}>*/}
+                            {/*<span>Выставки</span>*/}
+                            {/*<div className={"filter-close-button"}>*/}
+                                {/*<i className={"material-icons"}>{"clear"}</i>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
 
                         <div id={"filter-clear-button"}>
                             Очистить
@@ -42,7 +54,16 @@ class App extends React.Component {
             </div>
         );
     }
-
 }
 
-export default App;
+export default connect(
+    state => ({
+        testStore: state
+    }),
+    dispatch => ({
+        onRefreshFilter: (filterItem) => {
+            dispatch({ type: 'SELECT_FILTER', filter: filterItem })
+        }
+    })
+)(App);
+

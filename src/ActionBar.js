@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import jQuery from 'jquery';
 
 import './ActionBar.css';
@@ -14,11 +15,16 @@ class ActionBar extends React.Component {
         };
     }
 
+    filterItemClick() {
+        this.props.onSelectFilter(this.listValue.value);
+        alert("ActionBar.filterItemClick() : " + this.listValue.value);
+    }
+
     menuList(data) {
         var component = [];
         for(var p in data) {
             if (data.hasOwnProperty(p))
-                component.push(<li>{data[p]}</li>);
+                component.push(<li ref={(listValue) => { this.listValue = listValue; }} onClick={this.filterItemClick.bind(this)}>{data[p]}</li>);
         }
 
         return component;
@@ -42,4 +48,13 @@ class ActionBar extends React.Component {
     }
 }
 
-export default ActionBar;
+export default connect(
+    state => ({
+        testStore: state
+    }),
+    dispatch => ({
+        onSelectFilter: (filterItem) => {
+            dispatch({ type: 'SELECT_FILTER', filter: filterItem })
+        }
+    })
+)(ActionBar);
