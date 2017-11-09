@@ -8,7 +8,7 @@ import { createStore } from 'redux';
 import './index.css';
 import App from './App';
 
-function filterItemReducer(state, action) {
+function filterItemReducer(state = [], action) {
     if(action.type === "SELECT_FILTER") {
         return [
             ...state,

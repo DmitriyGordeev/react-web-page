@@ -16,7 +16,7 @@ class ActionBar extends React.Component {
     }
 
     filterItemClick() {
-        this.props.onSelectFilter(this.listValue.value);
+        this.props.onSelectFilter(/*this.listValue.value*/  "Hello!");
         alert("ActionBar.filterItemClick() : " + this.listValue.value);
     }
 
