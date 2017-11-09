@@ -17,14 +17,14 @@ class ActionBar extends React.Component {
 
     filterItemClick() {
         this.props.onSelectFilter(/*this.listValue.value*/  "Hello!");
-        alert("ActionBar.filterItemClick() : " + this.listValue.value);
+        alert("ActionBar.filterItemClick() : " + this.innerText);
     }
 
     menuList(data) {
         var component = [];
         for(var p in data) {
             if (data.hasOwnProperty(p))
-                component.push(<li ref={(listValue) => { this.listValue = listValue; }} onClick={this.filterItemClick.bind(this)}>{data[p]}</li>);
+                component.push(<li onClick={this.filterItemClick.bind(this)}>{data[p]}</li>);
         }
 
         return component;
