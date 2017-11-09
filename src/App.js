@@ -26,6 +26,10 @@ class App extends React.Component {
                 <div className={"filter-stroke"}>
                     <div className={"action-bar"}>
 
+                        {this.props.testStore.map((filterItem, index) =>
+                            <li key={index}>{filterItem}</li>
+                        )}
+
                         {/*<div className={"filter-item"}>*/}
                             {/*<span>Семинары и воркшопы</span>*/}
                             {/*<div className={"filter-close-button"}>*/}
@@ -52,5 +56,10 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default connect(
+    state => ({
+        testStore: state
+    }),
+    dispatch => ({})
+)(App);
 
