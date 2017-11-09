@@ -30,9 +30,11 @@ class App extends React.Component {
                             <div className={"filter-close-button"}>
                                 <i className={"material-icons"}>{"clear"}</i>
                             </div>
-
                         </div>
 
+                        <div id={"filter-clear-button"}>
+                            Очистить
+                        </div>
 
                     </div>
                 </div>
