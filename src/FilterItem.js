@@ -5,12 +5,16 @@ import './FilterItem.css';
 
 class FilterItem extends React.Component {
 
+    closeFilterHandler() {
+
+    }
+
     render() {
         return (
             <div className={"filter-item"}>
                 <span>{this.props.filterName}</span>
                 <div className={"filter-close-button"}>
-                    <i className={"material-icons"}>{"clear"}</i>
+                    <i className={"material-icons"} onClick={this.closeFilterHandler.bind(this)}>{"clear"}</i>
                 </div>
             </div>
         );

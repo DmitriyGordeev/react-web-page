@@ -25,14 +25,12 @@ class App extends React.Component {
                 <div className={"filter-stroke"}>
                     <div className={"action-bar"}>
 
-                        {/*{*/}
-                            {/*this.props.storeData.map((track, index) =>*/}
-                                {/*<span>{track}</span>*/}
-                            {/*)*/}
-                        {/*}*/}
+                        {
+                            this.props.storeData.map((filterItem, index) =>
+                                <FilterItem filterName={filterItem}/>
+                            )
+                        }
 
-                        <FilterItem filterName={"Семинары и воркшопы"}/>
-                        <FilterItem filterName={"Выставки"}/>
 
                         <div id={"filter-clear-button"} onClick={ this.clearFilter.bind(this) }>
                             Очистить
