@@ -17,6 +17,13 @@ function reducer(state = [], action) {
             action.filterItem
         ]
     }
+    else if(action.type === 'CLOSE_FILTER') {
+        var newstate = state.slice();
+        var index = newstate.indexOf(action.filterName);
+
+        newstate.splice(index, 1);
+        return newstate;
+    }
     else if(action.type === 'CLEAR_FILTER') {
         return [];
     }

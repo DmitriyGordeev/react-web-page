@@ -27,7 +27,7 @@ class App extends React.Component {
 
                         {
                             this.props.storeData.map((filterItem, index) =>
-                                <FilterItem filterName={filterItem}/>
+                                <FilterItem key={index} filterName={filterItem}/>
                             )
                         }
 

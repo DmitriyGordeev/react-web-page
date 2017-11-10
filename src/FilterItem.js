@@ -6,7 +6,7 @@ import './FilterItem.css';
 class FilterItem extends React.Component {
 
     closeFilterHandler() {
-
+        this.props.onCloseFilter(this.props.filterName);
     }
 
     render() {
@@ -25,4 +25,13 @@ FilterItem.defaultProps = {
     filterName: ""
 };
 
-export default FilterItem;
+export default connect(
+    state => ({
+        storeData: state
+    }),
+    dispatch => ({
+        onCloseFilter: (filter) => {
+            dispatch({ type: 'CLOSE_FILTER', filterName: filter })
+        }
+    })
+)(FilterItem);
