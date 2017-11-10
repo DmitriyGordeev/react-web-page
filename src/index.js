@@ -11,6 +11,7 @@ import App from './App';
 
 
 function reducer(state = [], action) {
+
     if(action.type === "SELECT_FILTER") {
         return [
             ...state,

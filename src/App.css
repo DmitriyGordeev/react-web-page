@@ -5,16 +5,17 @@ header {
     overflow: auto;
 }
 
-.filter-stroke {
+#filter-stroke {
     background: #dddddd;
     height: 56px;
     margin: 0;
     top: 56px;
     width: 100%;
     position: absolute;
+    display: none;
 }
 
-.filter-stroke > .action-bar {
+#filter-stroke > .action-bar {
     height: 100%;
     line-height: 56px;
 }

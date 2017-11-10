@@ -16,13 +16,23 @@ class App extends React.Component {
         this.props.onClearFilter();
     }
 
+    switchFilterStroke() {
+        if(this.props.storeData.length > 0) {
+            return {display: "block"};
+        }
+        else {
+            return {display: "none"};
+        }
+    }
+
     render() {
+        var style = this.switchFilterStroke();
         return (
             <div>
                 <header>
                     <ActionBar />
                 </header>
-                <div className={"filter-stroke"}>
+                <div id={"filter-stroke"} style={style}>
                     <div className={"action-bar"}>
 
                         {
