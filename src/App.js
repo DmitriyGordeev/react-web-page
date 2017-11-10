@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import './App.css';
 import Grid from "./Grid";
 import ActionBar from "./ActionBar";
+import FilterItem from "./FilterItem";
 
 class App extends React.Component {
 
@@ -24,25 +25,14 @@ class App extends React.Component {
                 <div className={"filter-stroke"}>
                     <div className={"action-bar"}>
 
-                        {
-                            this.props.storeData.map((track, index) =>
-                                <span>{track}</span>
-                            )
-                        }
+                        {/*{*/}
+                            {/*this.props.storeData.map((track, index) =>*/}
+                                {/*<span>{track}</span>*/}
+                            {/*)*/}
+                        {/*}*/}
 
-                        {/*<div className={"filter-item"}>*/}
-                            {/*<span>Семинары и воркшопы</span>*/}
-                            {/*<div className={"filter-close-button"}>*/}
-                                {/*<i className={"material-icons"}>{"clear"}</i>*/}
-                            {/*</div>*/}
-                        {/*</div>*/}
-
-                        {/*<div className={"filter-item"}>*/}
-                            {/*<span>Выставки</span>*/}
-                            {/*<div className={"filter-close-button"}>*/}
-                                {/*<i className={"material-icons"}>{"clear"}</i>*/}
-                            {/*</div>*/}
-                        {/*</div>*/}
+                        <FilterItem filterName={"Семинары и воркшопы"}/>
+                        <FilterItem filterName={"Выставки"}/>
 
                         <div id={"filter-clear-button"} onClick={ this.clearFilter.bind(this) }>
                             Очистить
