@@ -6,6 +6,10 @@ import './ActionBar.css';
 
 class ActionBar extends React.Component {
 
+    constructor() {
+        super();
+    }
+
     test_menuJson() {
         return {
             seminars_workshops_training: 'Семинары, воркшопы и тренинги',
@@ -15,29 +19,28 @@ class ActionBar extends React.Component {
         };
     }
 
-    filterItemClick() {
-        this.props.onSelectFilter(/*this.listValue.value*/  "Hello!");
-        alert("ActionBar.filterItemClick() : " + this.innerText);
+    filterItemClick(item) {
+        alert(item);
     }
 
     menuList(data) {
         var component = [];
         for(var p in data) {
             if (data.hasOwnProperty(p))
-                component.push(<li onClick={this.filterItemClick.bind(this)}>{data[p]}</li>);
+                component.push(<li onClick={ this.filterItemClick.bind(this, data[p]) }>{data[p]}</li>);
         }
 
         return component;
     }
 
-    onClickHandler() {
+    menuTitleClick() {
         jQuery("#top-menu-dropdown").toggle();
     }
 
     render() {
         return (
             <div className={"action-bar"}>
-                <div className={"dropdown-menu"} onClick={this.onClickHandler}>
+                <div className={"dropdown-menu"} onClick={this.menuTitleClick}>
                     <p>Тип события</p>
                     <ul id={"top-menu-dropdown"}>
                         { this.menuList(this.test_menuJson()) }
@@ -50,11 +53,7 @@ class ActionBar extends React.Component {
 
 export default connect(
     state => ({
-        testStore: state
+        storeData: state
     }),
-    dispatch => ({
-        onSelectFilter: (filterItem) => {
-            dispatch({ type: 'SELECT_FILTER', filter: filterItem })
-        }
-    })
+    dispatch => ({})
 )(ActionBar);
