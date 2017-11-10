@@ -13,8 +13,8 @@ class FilterItem extends React.Component {
         return (
             <div className={"filter-item"}>
                 <span>{this.props.filterName}</span>
-                <div className={"filter-close-button"}>
-                    <i className={"material-icons"} onClick={this.closeFilterHandler.bind(this)}>{"clear"}</i>
+                <div className={"filter-close-button"} onClick={this.closeFilterHandler.bind(this)}>
+                    <i className={"material-icons"} >{"clear"}</i>
                 </div>
             </div>
         );

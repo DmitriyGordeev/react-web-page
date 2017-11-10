@@ -19,3 +19,11 @@ header {
     height: 100%;
     line-height: 56px;
 }
+
+#filter-clear-button {
+    display: inline-block;
+    float: right;
+    color: #999999;
+    cursor: pointer;
+    font-weight: 100;
+}

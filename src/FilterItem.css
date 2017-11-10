@@ -31,12 +31,10 @@
     margin-top: 12px;
     zoom: 0.7;
     color: #999999;
+    transition-duration: 0.2s;
 }
 
-#filter-clear-button {
-    display: inline-block;
-    float: right;
-    color: #999999;
-    cursor: pointer;
-    font-weight: 100;
+.filter-close-button > i:hover {
+    color: #e25c5f;
+    transition-duration: 0.2s;
 }
