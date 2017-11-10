@@ -13,10 +13,19 @@ import App from './App';
 function reducer(state = [], action) {
 
     if(action.type === "SELECT_FILTER") {
-        return [
-            ...state,
-            action.filterItem
-        ]
+
+        var index = state.indexOf(action.filterItem);
+        console.log("add filter index = ", index);
+
+        if(index >= 0) {
+            return state;
+        }
+        else {
+            return [
+                ...state,
+                action.filterItem
+            ]
+        }
     }
     else if(action.type === 'CLOSE_FILTER') {
         var newstate = state.slice();
