@@ -11,11 +11,8 @@ class App extends React.Component {
         super();
     }
 
-    clickHandler() {
-        // var menu = document.getElementById("top-dropdown");
-        // menu.style.display = "block";
-
-        this.props.onClickHandler("Hello!");
+    clearFilter() {
+        this.props.onClearFilter();
     }
 
     render() {
@@ -26,8 +23,6 @@ class App extends React.Component {
                 </header>
                 <div className={"filter-stroke"}>
                     <div className={"action-bar"}>
-
-                        <div onClick={this.clickHandler.bind(this)}>{this.props.storeData}</div>
 
                         {/*<div className={"filter-item"}>*/}
                             {/*<span>Семинары и воркшопы</span>*/}
@@ -43,7 +38,7 @@ class App extends React.Component {
                             {/*</div>*/}
                         {/*</div>*/}
 
-                        <div id={"filter-clear-button"}>
+                        <div id={"filter-clear-button"} onClick={ this.clearFilter.bind(this) }>
                             Очистить
                         </div>
 
@@ -60,8 +55,8 @@ export default connect(
         storeData: state
     }),
     dispatch => ({
-        onClickHandler: (someVariable) => {
-            dispatch({ type: 'SELECT_FILTER', text: someVariable })
+        onClearFilter: () => {
+            dispatch({ type: 'CLEAR_FILTER' })
         }
     })
 )(App);

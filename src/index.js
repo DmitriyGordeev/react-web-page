@@ -13,7 +13,14 @@ const initState = "Init State Text";
 
 function reducer(state = initState, action) {
     if(action.type === "SELECT_FILTER") {
-        return initState + action.text;
+        return [
+            ...state,
+            action.filterItem
+        ]
+    }
+    else if(action.type === 'CLEAR_FILTER') {
+        alert("Clear Filter!");
+        return state;
     }
 
     return state;
