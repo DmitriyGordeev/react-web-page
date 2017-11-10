@@ -18,8 +18,7 @@ function reducer(state = [], action) {
         ]
     }
     else if(action.type === 'CLEAR_FILTER') {
-        alert("Clear Filter!");
-        return state;
+        return [];
     }
 
     return state;
