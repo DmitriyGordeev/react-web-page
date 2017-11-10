@@ -9,9 +9,8 @@ import './index.css';
 import App from './App';
 
 
-const initState = "Init State Text";
 
-function reducer(state = initState, action) {
+function reducer(state = [], action) {
     if(action.type === "SELECT_FILTER") {
         return [
             ...state,

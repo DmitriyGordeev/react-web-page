@@ -24,6 +24,12 @@ class App extends React.Component {
                 <div className={"filter-stroke"}>
                     <div className={"action-bar"}>
 
+                        {
+                            this.props.storeData.map((track, index) =>
+                                <span>{track}</span>
+                            )
+                        }
+
                         {/*<div className={"filter-item"}>*/}
                             {/*<span>Семинары и воркшопы</span>*/}
                             {/*<div className={"filter-close-button"}>*/}
