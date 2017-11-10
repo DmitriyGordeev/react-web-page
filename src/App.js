@@ -9,12 +9,13 @@ class App extends React.Component {
 
     constructor() {
         super();
-        this.onClickHandler = this.onClickHandler.bind(this);
     }
 
-    onClickHandler() {
-        var menu = document.getElementById("top-dropdown");
-        menu.style.display = "block";
+    clickHandler() {
+        // var menu = document.getElementById("top-dropdown");
+        // menu.style.display = "block";
+
+        this.props.onClickHandler("Hello!");
     }
 
     render() {
@@ -26,9 +27,7 @@ class App extends React.Component {
                 <div className={"filter-stroke"}>
                     <div className={"action-bar"}>
 
-                        {this.props.testStore.map((filterItem, index) =>
-                            <li key={index}>{filterItem}</li>
-                        )}
+                        <div onClick={this.clickHandler.bind(this)}>{this.props.storeData}</div>
 
                         {/*<div className={"filter-item"}>*/}
                             {/*<span>Семинары и воркшопы</span>*/}
@@ -58,8 +57,12 @@ class App extends React.Component {
 
 export default connect(
     state => ({
-        testStore: state
+        storeData: state
     }),
-    dispatch => ({})
+    dispatch => ({
+        onClickHandler: (someVariable) => {
+            dispatch({ type: 'SELECT_FILTER', text: someVariable })
+        }
+    })
 )(App);
 

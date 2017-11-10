@@ -8,18 +8,21 @@ import { createStore } from 'redux';
 import './index.css';
 import App from './App';
 
-function filterItemReducer(state = [], action) {
+
+const initState = "Init State Text";
+
+function reducer(state = initState, action) {
     if(action.type === "SELECT_FILTER") {
-        return [
-            ...state,
-            action.filter
-        ];
+        return initState + action.text;
     }
+
+    return state;
 }
 
 jQuery(document).ready(function() {
 
-    const store = createStore(filterItemReducer);
+    const store = createStore(reducer,
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
     ReactDOM.render(
         <Provider store={store}>
             <App />
