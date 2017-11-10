@@ -20,7 +20,7 @@ class ActionBar extends React.Component {
     }
 
     filterItemClick(item) {
-        alert(item);
+        this.props.onSelectFilter(item);
     }
 
     menuList(data) {
@@ -55,5 +55,9 @@ export default connect(
     state => ({
         storeData: state
     }),
-    dispatch => ({})
+    dispatch => ({
+        onSelectFilter: (filter) => {
+            dispatch({ type: 'SELECT_FILTER', filterItem: filter});
+        }
+    })
 )(ActionBar);
