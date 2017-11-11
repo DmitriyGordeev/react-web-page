@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import './Grid.css'
 import Card from "./Card";
+
+const typeToTitle = {
+    seminars_workshops_training: 'Семинары, воркшопы и тренинги',
+    lectures_talks: 'Лекции и дискуссии',
+    concerts_performances: 'Концерты, спектакли и перформансы',
+    film_screenings: 'Кинопоказы'
+};
 
 class Grid extends React.Component {
 
@@ -17,7 +26,7 @@ class Grid extends React.Component {
             },
             {
                 id: 2,
-                type: 'seminars_workshops_training',
+                type: 'lectures_talks',
                 title: 'Teens Day',
                 location: 'Музей современного искусства «Гараж»',
                 image_url: 'https://cdn-static-garagemca.gcdn.co/storage/event/1/6/1681/preview_preview_image-f9096671-ffcc-4a21-8757-56bedc3aa296.jpg',
@@ -47,12 +56,33 @@ class Grid extends React.Component {
     }
 
     jsonCards(data) {
-        return data.map(function(object) {
-            return <Card
-                eventName={object.title}
-                eventLocation={object.location}
-                imageSrc={object.image_url} />;
+        var thisObject = this;
+
+        if(thisObject.props.storeData.length == 0)
+        {
+            return data.map(function(object, index) {
+                var type = typeToTitle[object.type];
+                return <Card
+                    key={index}
+                    activity={type}
+                    eventName={object.title}
+                    eventLocation={object.location}
+                    imageSrc={object.image_url} />;
+            });
+        }
+
+        return data.map(function(object, index) {
+            var type = typeToTitle[object.type];
+            if(thisObject.props.storeData.indexOf(type) != -1) {
+                return <Card
+                    key={index}
+                    activity={type}
+                    eventName={object.title}
+                    eventLocation={object.location}
+                    imageSrc={object.image_url} />;
+            }
         });
+
     }
 
     render() {
@@ -65,4 +95,9 @@ class Grid extends React.Component {
 
 }
 
-export default Grid;
+export default connect(
+    state => ({
+        storeData: state
+    }),
+    dispatch => ({})
+)(Grid);
