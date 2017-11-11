@@ -28,6 +28,7 @@ header {
     font-weight: 100;
     transition-duration: 0.2s;
 }
+
 #filter-clear-button:hover {
     color: #e25c5f;
     transition-duration: 0.2s;
