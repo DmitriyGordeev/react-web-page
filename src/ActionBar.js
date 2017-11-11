@@ -35,13 +35,16 @@ class ActionBar extends React.Component {
 
     menuTitleClick() {
         var menu = document.querySelector("#top-menu-dropdown");
+        var menu_arrow = document.querySelector("#top-menu-arrow");
 
         if(this.menuVisible === false) {
             menu.style.display = "block";
+            menu_arrow.innerText = "keyboard_arrow_up";
             this.menuVisible = true;
         }
         else {
             menu.style.display = "none";
+            menu_arrow.innerText = "keyboard_arrow_down";
             this.menuVisible = false;
         }
     }
