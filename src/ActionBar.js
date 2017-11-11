@@ -52,10 +52,10 @@ class ActionBar extends React.Component {
                 <div className={"dropdown-menu"} onClick={this.menuTitleClick.bind(this)}>
                     <p>Тип события</p>
                     <i id="top-menu-arrow" className={"material-icons"} >{"keyboard_arrow_down"}</i>
-                    <ul id={"top-menu-dropdown"} className={"hidden"}>
-                        { this.menuList(this.test_menuJson()) }
-                    </ul>
                 </div>
+                <ul id={"top-menu-dropdown"} className={"hidden"}>
+                    { this.menuList(this.test_menuJson()) }
+                </ul>
             </div>
         );
     }

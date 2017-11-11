@@ -30,7 +30,7 @@
     margin: 0;
 }
 
-.dropdown-menu > ul {
+#top-menu-dropdown {
     background: #000000;
     color: white;
     position: absolute;
@@ -43,18 +43,18 @@
     margin: 0;
 }
 
-.dropdown-menu > ul > li:not(:last-of-type) {
+#top-menu-dropdown > li:not(:last-of-type) {
     border-bottom: 1px solid #dddddd;
 }
 
-.dropdown-menu > ul > li {
+#top-menu-dropdown > li {
     font-weight: 100;
     transition-duration: 0.2s;
     cursor: pointer;
     padding: 12px;
 }
 
-.dropdown-menu > ul > li:hover {
+#top-menu-dropdown > li:hover {
     color: #30bfb3;
     transition-duration: 0.2s;
 }
