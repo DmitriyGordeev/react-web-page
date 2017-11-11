@@ -10,6 +10,22 @@ class ActionBar extends React.Component {
         this.menuVisible = false;
     }
 
+    switch_arrow() {
+        var menu = document.querySelector("#top-menu-dropdown");
+        var menu_arrow = document.querySelector("#top-menu-arrow");
+
+        if(this.menuVisible === false) {
+            menu.style.display = "block";
+            menu_arrow.innerText = "keyboard_arrow_up";
+            this.menuVisible = true;
+        }
+        else {
+            menu.style.display = "none";
+            menu_arrow.innerText = "keyboard_arrow_down";
+            this.menuVisible = false;
+        }
+    }
+
     test_menuJson() {
         return {
             seminars_workshops_training: 'Семинары, воркшопы и тренинги',
@@ -20,6 +36,7 @@ class ActionBar extends React.Component {
     }
 
     filterItemClick(item) {
+        this.switch_arrow();
         this.props.onSelectFilter(item);
     }
 
@@ -34,19 +51,7 @@ class ActionBar extends React.Component {
     }
 
     menuTitleClick() {
-        var menu = document.querySelector("#top-menu-dropdown");
-        var menu_arrow = document.querySelector("#top-menu-arrow");
-
-        if(this.menuVisible === false) {
-            menu.style.display = "block";
-            menu_arrow.innerText = "keyboard_arrow_up";
-            this.menuVisible = true;
-        }
-        else {
-            menu.style.display = "none";
-            menu_arrow.innerText = "keyboard_arrow_down";
-            this.menuVisible = false;
-        }
+        this.switch_arrow();
     }
 
     render() {
