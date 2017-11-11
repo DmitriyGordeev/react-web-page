@@ -8,6 +8,7 @@ class ActionBar extends React.Component {
 
     constructor() {
         super();
+        this.menuVisible = false;
     }
 
     test_menuJson() {
@@ -34,25 +35,22 @@ class ActionBar extends React.Component {
     }
 
     menuTitleClick() {
+        var menu = document.querySelector("#top-menu-dropdown");
 
-        var menu = document.getElementById("top-menu-dropdown");
-        console.log("before change: ", menu.className);
-
-
-        if(menu.className === "hidden") {
-            menu.className = "";
+        if(this.menuVisible === false) {
+            menu.style.display = "block";
+            this.menuVisible = true;
         }
-        else if(menu.className === ""){
-            menu.className = "hidden";
+        else {
+            menu.style.display = "none";
+            this.menuVisible = false;
         }
-
-        // jQuery("#top-menu-dropdown").toggle();
     }
 
     render() {
         return (
             <div className={"action-bar"}>
-                <div className={"dropdown-menu"} onClick={this.menuTitleClick}>
+                <div className={"dropdown-menu"} onClick={this.menuTitleClick.bind(this)}>
                     <p>Тип события</p>
                     <ul id={"top-menu-dropdown"} className={"hidden"}>
                         { this.menuList(this.test_menuJson()) }
