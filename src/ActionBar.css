@@ -7,13 +7,20 @@
 
 .dropdown-menu {
     font-family: 'Roboto Condensed', sans-serif;
-    background: blue;
-    display: inline-block;
+    display: table;
 }
 
 #top-menu-arrow {
-    display: inline-block;
-    background: orange;
+    display: table-cell;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #999999;
+    transition-duration: 0.2s;
+}
+
+#top-menu-arrow:hover {
+    transition-duration: 0.2s;
+    color: black;
 }
 
 .dropdown-menu > p {
@@ -25,7 +32,7 @@
 }
 
 .dropdown-menu > p:hover {
-    color: #30bfb3;
+    color: black;
     transition-duration: 0.2s;
 }
 
