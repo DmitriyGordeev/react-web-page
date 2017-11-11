@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import jQuery from 'jquery';
 
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 import './index.css';
 import App from './App';
-
 
 
 function reducer(state = [], action) {
@@ -41,24 +39,23 @@ function reducer(state = [], action) {
     return state;
 }
 
-jQuery(document).ready(function() {
-
-    const store = createStore(reducer,
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-    ReactDOM.render(
-        <Provider store={store}>
-            <App />
-        </Provider>,
-        document.getElementById('root'));
+const store = createStore(reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 
-    // click on the blank space makes the top-menu to disappear:
-    jQuery("#root").click(function() {
-        var menu = jQuery("#top-menu-dropdown");
-        if(menu.css("display") != "none") {
-            menu.toggle();
-        }
-    });
-});
+var root = document.getElementById('root');
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    root);
 
-// registerServiceWorker();
+
+function onRootClick() {
+
+    var menu = document.getElementById("top-menu-dropdown");
+    if(menu.style.display != "none") {
+        menu.style.display = "none";
+    }
+}
+root.addEventListener("click", onRootClick);
