@@ -44,6 +44,6 @@
     transition-duration: 0.2s;
 }
 
-#top-menu-dropdown {
+.hidden {
     display: none;
 }

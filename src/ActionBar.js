@@ -34,7 +34,19 @@ class ActionBar extends React.Component {
     }
 
     menuTitleClick() {
-        jQuery("#top-menu-dropdown").toggle();
+
+        var menu = document.getElementById("top-menu-dropdown");
+        console.log("before change: ", menu.className);
+
+
+        if(menu.className === "hidden") {
+            menu.className = "";
+        }
+        else if(menu.className === ""){
+            menu.className = "hidden";
+        }
+
+        // jQuery("#top-menu-dropdown").toggle();
     }
 
     render() {
@@ -42,7 +54,7 @@ class ActionBar extends React.Component {
             <div className={"action-bar"}>
                 <div className={"dropdown-menu"} onClick={this.menuTitleClick}>
                     <p>Тип события</p>
-                    <ul id={"top-menu-dropdown"}>
+                    <ul id={"top-menu-dropdown"} className={"hidden"}>
                         { this.menuList(this.test_menuJson()) }
                     </ul>
                 </div>
