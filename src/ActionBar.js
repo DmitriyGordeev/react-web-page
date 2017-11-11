@@ -55,6 +55,7 @@ class ActionBar extends React.Component {
                         { this.menuList(this.test_menuJson()) }
                     </ul>
                 </div>
+                <i id="top-menu-arrow" className={"material-icons"} >{"keyboard_arrow_down"}</i>
             </div>
         );
     }

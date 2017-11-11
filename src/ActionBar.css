@@ -2,10 +2,18 @@
     width: 85%;
     margin: 0 auto;
     overflow: auto;
+    line-height: 56px;
 }
 
 .dropdown-menu {
     font-family: 'Roboto Condensed', sans-serif;
+    background: blue;
+    display: inline-block;
+}
+
+#top-menu-arrow {
+    display: inline-block;
+    background: orange;
 }
 
 .dropdown-menu > p {
