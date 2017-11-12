@@ -26,6 +26,7 @@ class Card extends React.Component {
     }
 
     render() {
+
         return (
             <div className={"card-box-container"}>
                 <div className={"card-box"}>
@@ -34,7 +35,12 @@ class Card extends React.Component {
                         eventName={this.props.eventName}
                         eventLocation={this.props.eventLocation} />
 
-                    <img src={ this.props.imageSrc }/>
+                    <div className={"bottom-image-container"} style={
+                        {
+                            backgroundImage: "url('" + this.props.imageSrc + "')"
+                        }
+                    }></div>
+                    {/*<img src={ this.props.imageSrc }/>*/}
                 </div>
             </div>
         );

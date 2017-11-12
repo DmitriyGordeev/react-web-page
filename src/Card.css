@@ -46,9 +46,21 @@
     width: 80%;
 }
 
-.card-box > img {
+/*.card-box > img {*/
+    /*height: 57%;*/
+    /*width: 100%;*/
+    /*position: absolute;*/
+    /*bottom: 0;*/
+/*}*/
+
+.bottom-image-container {
     height: 57%;
     width: 100%;
     position: absolute;
     bottom: 0;
+
+    background-size: 160%;
+    background-position: 50% 30%;
+
+    background-repeat: no-repeat;
 }
