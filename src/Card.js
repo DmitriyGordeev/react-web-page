@@ -8,7 +8,10 @@ class CardText extends React.Component {
             <div className={"card-text"}>
                 <p className={"activity-type"}>{ this.props.activity }</p>
                 <p className={"event-name"}>{ this.props.eventName }</p>
-                <p className={"event-location"}>{ this.props.eventLocation }</p>
+                <p className={"event-location"}>
+                    <i className={"material-icons"} >{"location_on"}</i>
+                    { this.props.eventLocation }
+                </p>
             </div>
         );
     }

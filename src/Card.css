@@ -46,6 +46,10 @@
     width: 80%;
 }
 
+.event-location > i {
+    zoom: 0.7;
+    padding: 0 5px;
+}
 
 .bottom-image-container {
     height: 57%;
