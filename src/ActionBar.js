@@ -44,7 +44,7 @@ class ActionBar extends React.Component {
         var component = [];
         for(var p in data) {
             if (data.hasOwnProperty(p))
-                component.push(<li onClick={ this.filterItemClick.bind(this, data[p]) }>{data[p]}</li>);
+                component.push(<li key={p} onClick={ this.filterItemClick.bind(this, data[p]) }>{data[p]}</li>);
         }
 
         return component;

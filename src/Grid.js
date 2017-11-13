@@ -139,6 +139,8 @@ class Grid extends React.Component {
                     activity={type}
                     eventName={object.title}
                     eventLocation={object.location}
+                    eventStartDate={object.start_date}
+                    eventEndDate={object.end_date}
                     imageSrc={object.image_url} />;
             });
         }
@@ -146,11 +148,14 @@ class Grid extends React.Component {
         return data.map(function(object, index) {
             var type = typeToTitle[object.type];
             if(thisObject.props.storeData.indexOf(type) != -1) {
+
                 return <Card
                     key={index}
                     activity={type}
                     eventName={object.title}
                     eventLocation={object.location}
+                    eventStartDate={object.start_date}
+                    eventEndDate={object.end_date}
                     imageSrc={object.image_url} />;
             }
         });

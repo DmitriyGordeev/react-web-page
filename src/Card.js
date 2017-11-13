@@ -1,7 +1,24 @@
 import React, { Component } from 'react';
 import './Card.css'
 
+const months = [
+    "января", "февраля", "марта",
+    "апреля", "мая", "июня",
+    "июля", "августа", "сентября",
+    "октября", "ноября", "декабря"
+];
+
 class CardText extends React.Component {
+
+    eventPeriod(startDate, endDate) {
+        var start_date = new Date(startDate);
+        var start_formated = start_date.getDate() + " " + months[start_date.getMonth()] + " " + start_date.getFullYear();
+
+        var end_date = new Date(endDate);
+        var end_formated = end_date.getDate() + " " + months[end_date.getMonth()] + " " + end_date.getFullYear();
+
+        return start_formated + " - " + end_formated;
+    }
 
     render() {
         return (
@@ -12,6 +29,9 @@ class CardText extends React.Component {
                     <i className={"material-icons"} >{"location_on"}</i>
                     { this.props.eventLocation }
                 </p>
+                <p className={"event-date"}>{
+                    this.eventPeriod(this.props.eventStartDate, this.props.eventEndDate)
+                }</p>
             </div>
         );
     }
@@ -20,7 +40,9 @@ class CardText extends React.Component {
 CardText.defaultProps = {
     activity: "Activity Type",
     eventName: "Event Name",
-    eventLocation: "Event Location"
+    eventLocation: "Event Location",
+    eventStartDate: "",
+    eventEndDate: ""
 };
 
 class Card extends React.Component {
@@ -36,7 +58,10 @@ class Card extends React.Component {
                     <CardText
                         activity={this.props.activity}
                         eventName={this.props.eventName}
-                        eventLocation={this.props.eventLocation} />
+                        eventLocation={this.props.eventLocation}
+                        eventStartDate={this.props.eventStartDate}
+                        eventEndDate={this.props.eventEndDate}
+                        />
 
                     <div className={"bottom-image-container"} style={
                         {
