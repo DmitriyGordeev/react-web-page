@@ -28,10 +28,9 @@ class CardText extends React.Component {
                 <p className={"event-location"}>
                     <i className={"material-icons"} >{"location_on"}</i>
                     { this.props.eventLocation }
+                    <br />
+                    <span>{ this.eventPeriod(this.props.eventStartDate, this.props.eventEndDate)}</span>
                 </p>
-                <p className={"event-date"}>{
-                    this.eventPeriod(this.props.eventStartDate, this.props.eventEndDate)
-                }</p>
             </div>
         );
     }
