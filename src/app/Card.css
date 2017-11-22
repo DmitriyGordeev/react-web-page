@@ -1,0 +1,141 @@
+.card-box-container {
+    height: 560px;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.card-box {
+    background: white;
+    height: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: relative;
+}
+
+.card-box > .card-text {
+    /*background: green;*/
+    height: 50%;
+    padding: 7px 16px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.card-text > .activity-type {
+    color: #30bfb3;
+    width: 80%;
+    /*background: blue;*/
+}
+
+.card-text > .event-name {
+    /*background: red;*/
+    font-size: 21px;
+    margin-top: -5px;
+    font-weight: 800;
+}
+
+.card-text > .event-location {
+    color: #999999;
+    /*background: yellow;*/
+    position: absolute;
+    bottom: 10px;
+    font-size: 15px;
+    width: 80%;
+}
+
+.event-location > i {
+    zoom: 0.7;
+    padding: 0 3px;
+}
+
+.bottom-image-container {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+    background-size: 160%;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (min-width: 1100px) {
+
+    .card-box-container {
+        width: 30%;
+        max-width: 400px;
+        min-width: 300px;
+        margin: 15px 15px;
+    }
+
+    /*section.grid {  background: purple;  }*/
+}
+
+@media screen and (max-width: 1100px) {
+
+    .card-box-container {
+        width: 30%;
+        max-width: 350px;
+        min-width: 300px;
+        margin: 15px 10px;
+    }
+
+    /* for test purposes only: */
+    /*section.grid {background: darkkhaki;}*/
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .card-box-container {
+        width: 43%;
+        max-width: 350px;
+        min-width: 260px;
+        margin: 15px 20px;
+        zoom: 0.9;
+    }
+
+    /* for test purposes only: */
+    /*section.grid {background: hotpink;}*/
+}
+
+@media screen and (max-width: 768px) {
+
+    .card-box-container {
+        width: 45%;
+        margin: 10px 15px;
+        zoom: 0.8;
+    }
+
+    /* for test purposes only: */
+    /*section.grid {background: blue;}*/
+
+}
+
+@media screen and (max-width: 640px) {
+
+    .card-box-container {
+        max-width: 100%;
+        width: 100%;
+        min-width: 0;
+        margin: 0 auto 40px;
+    }
+
+    /* for test purposes only: */
+    /*section.grid {background: green;}*/
+
+}
+
+
+@media screen and (max-width: 350px) {
+
+    .card-box-container {
+        max-width: 100%;
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* for test purposes only: */
+    /*section.grid {background: green;}*/
+
+}
